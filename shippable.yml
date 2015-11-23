@@ -6,7 +6,7 @@ python:
 env:
  global:
   - dev=aaa
- matrix:
+ #matrix:
   - test3=abcd
   - secure: mzk6cVy2cqFwAyxPDMj5a85RlTu7UBomnjJNT7TUPKR1bH1zd1XSkywZJgWM/FKYuMsB90otd4WazfBu/JnbdUi6FAKX9S6xnhRILpYK3ed7hNm+JNfJBLB61HuGT4LUdJ4Ul3hDrG2MQ/oYERmwyKkG7wh6rxw/TmSIzYOPm31TDOYUR2iy3p37KYYMPAq+mcSer3lPWF8VhNTA0LZx+vYzQIbg3K7GFOpU8crlqDGmuqCg7V+iVB2XmpPX48FVxPZNKQ5U13R92jUj+zd1dAFCRzcu22UCtj61EPrv1pIMwLdhyfYKhQ9Ta13rn7nAaKfA9yBwiOXWKD4xHk5yww==
 
