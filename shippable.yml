@@ -7,6 +7,7 @@ python:
   
 env:
  - dev=aaa
+ - test3=abcd
 
 install:
   - pip install -r requirements.txt
@@ -16,7 +17,7 @@ archive: true
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - echo $key1 and $foo
+  - echo $key1 and $foo and $test3
  
 script:
   - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
