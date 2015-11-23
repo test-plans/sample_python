@@ -3,6 +3,9 @@ language: python
 
 python:
   - 3.3
+  
+env:
+ - Foo=bar
 
 install:
   - pip install -r requirements.txt
