@@ -1,13 +1,14 @@
 language: python
 
-
-
 python:
   - 3.3
   
 env:
- - dev=aaa
- - test3=abcd
+ global:
+  - dev=aaa
+ matrix:
+  - test3=abcd
+  - secure: mzk6cVy2cqFwAyxPDMj5a85RlTu7UBomnjJNT7TUPKR1bH1zd1XSkywZJgWM/FKYuMsB90otd4WazfBu/JnbdUi6FAKX9S6xnhRILpYK3ed7hNm+JNfJBLB61HuGT4LUdJ4Ul3hDrG2MQ/oYERmwyKkG7wh6rxw/TmSIzYOPm31TDOYUR2iy3p37KYYMPAq+mcSer3lPWF8VhNTA0LZx+vYzQIbg3K7GFOpU8crlqDGmuqCg7V+iVB2XmpPX48FVxPZNKQ5U13R92jUj+zd1dAFCRzcu22UCtj61EPrv1pIMwLdhyfYKhQ9Ta13rn7nAaKfA9yBwiOXWKD4xHk5yww==
 
 install:
   - pip install -r requirements.txt
@@ -17,7 +18,7 @@ archive: true
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - echo $key1 and $foo and $test3
+  - echo $key1 and $foo and $test3 and $var2
  
 script:
   - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
