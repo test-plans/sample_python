@@ -1,5 +1,5 @@
 language: python
-
+build_imageL drydock/u12pyt:prod
 python:
 - 2.6
 - 2.7
