@@ -11,8 +11,9 @@ python:
 - pypy3
 
 
-#install:
+install:
  # - pip install -r requirements.txt
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.2' ]]; then pip install coverage==3.7.1 codecov ; fi 
 
 # Make folders for the reports
 before_script:
@@ -37,8 +38,3 @@ notifications:
          on_failure: always
 
 
-branches:
-  only:
-    - dev
-    - test-pr
-    - master
