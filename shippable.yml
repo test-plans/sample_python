@@ -12,7 +12,8 @@ python:
 
 
 install:
-  - pip install -r requirements.txt
+ # - pip install -r requirements.txt
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.2' ]]; then pip install coverage==3.7.1 codecov ; fi 
 
 # Make folders for the reports
 before_script:
@@ -37,4 +38,4 @@ notifications:
          on_failure: always
 
 
-build_image: drydock/u12pyt:ci
+build_image: drydock/u12pytall:tip
