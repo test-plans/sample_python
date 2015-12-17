@@ -40,4 +40,4 @@ notifications:
          on_failure: always
 
 
-build_image: drydock/u12pytall:tip
+build_image: drydock/u12pytpls:tip
