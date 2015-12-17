@@ -1,15 +1,15 @@
 language: python
 
 
-
 python:
-  - 3.3
+  - 3.2
   
 env:
  - dev=aaa
 
 install:
   - pip install -r requirements.txt
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.2' ]]; then pip install coverage==3.7.1 codecov ; fi 
 
 archive: true
 # Make folders for the reports
